@@ -395,18 +395,18 @@ const getAllAppointment = async (req, res) => {
   }
 };
 
-const rzpKey = process.env.razorpayKey;
-const rzpSecret = process.env.razorpayPassword;
+  const rzpKey = process.env.razorpayKey;
+  const rzpSecret = process.env.razorpayPassword;
 
-const razorpayInstance = new Razorpay({
-  key_id: rzpKey,
-  key_secret: rzpSecret,
-});
+  const razorpayInstance = new Razorpay({
+    key_id: rzpKey,
+    key_secret: rzpSecret,
+  });
 
-const signatureData = {
-  key_id: rzpKey,
-  key_secret: rzpSecret,
-};
+  const signatureData = {
+    key_id: rzpKey,
+    key_secret: rzpSecret,
+  };
 
 const createOrder = async (req, res) => {
   const { amount, currency } = req.body;
